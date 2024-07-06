@@ -1,0 +1,9 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://bjcbkk30d12nd"]
+
+[resource]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(12, 12, 0)
+angle_max = 720.0
+gravity = Vector3(60, 0, 0)
+scale_min = 0.5

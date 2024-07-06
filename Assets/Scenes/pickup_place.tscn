@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://6wd8j40pi8kq"]
+
+[ext_resource type="Script" path="res://PickupPlace.gd" id="1_ecpdh"]
+[ext_resource type="Texture2D" uid="uid://bbond262xhop0" path="res://Assets/Sprites/Kings and Pigs/Sprites/08-Box/Idle.png" id="2_31k4o"]
+[ext_resource type="Texture2D" uid="uid://bdkrub40e12m4" path="res://Assets/Sprites/bubble.png" id="3_q5ohu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gm1gp"]
+size = Vector2(115, 49)
+
+[node name="PickupPlace" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_ecpdh")
+
+[node name="Boxes" type="Node2D" parent="."]
+
+[node name="Box" type="Sprite2D" parent="Boxes"]
+position = Vector2(0, 1)
+texture = ExtResource("2_31k4o")
+
+[node name="Box2" type="Sprite2D" parent="Boxes"]
+position = Vector2(0, -14)
+texture = ExtResource("2_31k4o")
+
+[node name="Box3" type="Sprite2D" parent="Boxes"]
+position = Vector2(21, -3)
+texture = ExtResource("2_31k4o")
+
+[node name="Box4" type="Sprite2D" parent="Boxes"]
+position = Vector2(-42, 2)
+texture = ExtResource("2_31k4o")
+
+[node name="Box5" type="Sprite2D" parent="Boxes"]
+position = Vector2(-42, -13)
+texture = ExtResource("2_31k4o")
+
+[node name="Box6" type="Sprite2D" parent="Boxes"]
+position = Vector2(-21, 0)
+texture = ExtResource("2_31k4o")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6.5, -11.5)
+shape = SubResource("RectangleShape2D_gm1gp")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 7.0
+offset_top = -99.0
+offset_right = 107.0
+offset_bottom = -49.0
+texture = ExtResource("3_q5ohu")
+region_rect = Rect2(32.0001, 76.9999, 294, 225)
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 90.0
+offset_bottom = 32.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "TAKE BOX HERE !"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

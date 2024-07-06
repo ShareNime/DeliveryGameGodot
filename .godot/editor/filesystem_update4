@@ -1,0 +1,12 @@
+res://Assets/Scenes/in_game_scene.tscn
+res://Assets/Scenes/sprintParticle.tres
+res://Assets/Scenes/testbutton.tres
+res://Assets/Scenes/main_character.tscn
+res://Assets/Scenes/NPC_king.tscn
+res://Assets/Scenes/npc_mask.tscn
+res://Assets/Scenes/npc_frog.tscn
+res://Assets/Scenes/npc_virtual_guy.tscn
+res://Assets/Scenes/pickup_place.tscn
+res://Assets/Scenes/score_ddl.tscn
+res://Assets/Scenes/main_menu.tscn
+res://Assets/Scenes/pause_panel.tscn
